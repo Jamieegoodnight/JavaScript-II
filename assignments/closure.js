@@ -13,6 +13,20 @@ function royalDecree(messengername, decree){
 
 royalDecree("John", "I declare war on Estonia!");
 
+//
+
+const deathSentence=function(){
+  let condemned=0;
+  return function(){
+    condemned++;
+    console.log(`I hereby and verily condemn ${condemned} people to death, on this day!`)
+    return condemned; 
+  };
+}
+
+const proclamation=deathSentence();
+proclamation();
+
 // // ==== Challenge 2: Create a counter function ====
 // const counter = () => {
 //   // Return a function that when invoked increments and returns a counter variable.
